@@ -1,31 +1,35 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { ConnectWallet } from "@thirdweb-dev/react";
+import Donor from "./pages/Donor";
+import Login from "./pages/Login/Login";
+import Org from "./pages/Org";
+import Register from "./pages/Register/Register";
 
-import { Sidebar, Navbar } from './components';
-import { CampaignDetails, CreateCampaign, Nft, Home, Profile, Community, Escrow } from './pages';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom'
 
-const App = () => {
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <div><Login/></div>
+  },
+  {
+    path: '/register',
+    element: <div><Register/></div>
+  },
+  {
+    path: '/donor',
+    element: <div><Donor/></div>
+  },
+  {
+    path: '/org/*',
+    element: <div><Org/></div>
+  }
+])
+
+export default function Home() {
   return (
-    <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
-      <div className="sm:flex hidden mr-10 relative">
-        <Sidebar />
-      </div>
-
-      <div className="flex-1 content-center max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
-        <Navbar />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/create-campaign" element={<CreateCampaign />} />
-          <Route path="/campaign-details/:id" element={<CampaignDetails />} />
-          <Route path="/community" element={<Community />} />
-          <Route path='/escrow' element={<Escrow />} />
-          <Route path="/nft" element={<Nft />} />
-        </Routes>
-      </div>
-    </div>
-  )
+    <RouterProvider router={router}/>
+  );
 }
-
-export default App
