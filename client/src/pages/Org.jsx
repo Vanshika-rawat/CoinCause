@@ -1,14 +1,13 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
-import { ConnectWallet } from "@thirdweb-dev/react";
-
 import { Sidebar, NavbarOrg } from "../components";
-import { CampaignDetails, CreateCampaign, Home, Profile } from '.';
+import { CampaignDetails, CreateCampaign, Home, Profile, Community, Escrow } from '../pages';
 
-const Donor = () => {
+
+const Org = () => {
   return (
 
-    <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
+    <div className="relative sm:-8 p-4 min-h-screen flex flex-row">
 
       <div className="sm:flex hidden mr-10 relative">
         <Sidebar />
@@ -20,9 +19,11 @@ const Donor = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/create-campaign" element={<CreateCampaign />} />
-          <Route path="/campaign-details/:id" element={<CampaignDetails />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="create-campaign" element={<CreateCampaign />} />
+          <Route path="campaign-details/:id" element={<CampaignDetails />} />
+          <Route path="community" element={<Community />} />
+          <Route path='escrow' element={<Escrow />} />
         </Routes>
       </div>
       
@@ -30,4 +31,4 @@ const Donor = () => {
   )
 }
 
-export default Donor
+export default Org

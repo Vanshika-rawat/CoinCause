@@ -1,4 +1,5 @@
 export { default as Sidebar } from './Sidebar'
+export { default as SidebarD } from './Sidebar-Donor'
 export { default as Navbar } from './Navbar-donor'
 export { default as NavbarOrg } from './Navbar-org'
 export { default as CustomButton } from './CustomButton'

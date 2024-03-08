@@ -32,7 +32,7 @@ const CreateCampaign = () => {
         setIsLoading(true)
         await createCampaign({ ...form, target: ethers.utils.parseUnits(form.target, 18)})
         setIsLoading(false);
-        navigate('/');
+        navigate('/org');
       } else {
         alert('Provide valid image URL')
         setForm({ ...form, image: '' });
@@ -44,14 +44,14 @@ const CreateCampaign = () => {
     <div className="bg-[#1c1c24] flex justify-center items-center flex-col rounded-[10px] sm:p-10 p-4">
       {isLoading && <Loader />}
       <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] rounded-[10px]">
-        <h1 className="font-epilogue font-bold sm:text-[40px] text-[25px] leading-[38px] text-white">Start a Campaign, Become Recipient Of CrowdFund 🥳</h1>
+        <h1 className="font-epilogue font-bold sm:text-[30px] text-[25px] leading-[38px] text-white">Start a Campaign, Become Recipient Of CrowdFund 🥳</h1>
       </div>
 
       <form onSubmit={handleSubmit} className="w-full mt-[65px] flex flex-col gap-[30px]">
         <div className="flex flex-wrap gap-[40px]">
           <FormField 
             labelName="Your Name *"
-            placeholder="Aadarsh"
+            placeholder="Enter Your Name"
             inputType="text"
             value={form.name}
             handleChange={(e) => handleFormFieldChange('name', e)}
@@ -73,10 +73,7 @@ const CreateCampaign = () => {
             handleChange={(e) => handleFormFieldChange('description', e)}
           />
 
-        <div className="w-full flex justify-start items-center p-4 bg-[#7f00ff] h-[120px] rounded-[10px]">
-          <img src={money} alt="money" className="w-[40px] h-[40px] object-contain"/>
-          <h4 className="font-epilogue font-bold text-[25px] text-white ml-[20px]">Your Dream, Our Community, & Endless Possibilities 😎</h4>
-        </div>
+        
 
         <div className="flex flex-wrap gap-[40px]">
           <FormField 
@@ -102,6 +99,11 @@ const CreateCampaign = () => {
             value={form.image}
             handleChange={(e) => handleFormFieldChange('image', e)}
           />
+
+        <div className="w-full flex justify-start items-center p-4 bg-[#7f00ff] h-[70px] rounded-[10px]">
+          <img src={money} alt="money" className="w-[40px] h-[40px] object-contain"/>
+          <h4 className="font-epilogue font-bold text-[20px] text-white ml-[20px]">Your Dream, Our Community, & Endless Possibilities 😎</h4>
+        </div>
 
           <div className="flex justify-center items-center mt-[40px]">
             <CustomButton 

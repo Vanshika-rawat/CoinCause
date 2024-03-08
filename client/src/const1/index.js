@@ -4,22 +4,12 @@ export const navlinks = [
   {
     name: 'dashboard',
     imgUrl: dashboard,
-    link: '/org',
-  },
-  {
-    name: 'campaign',
-    imgUrl: createCampaign,
-    link: 'create-campaign',
+    link: '/donor',
   },
   {
     name: 'community',
     imgUrl: message,
     link: 'community',
-  },
-  {
-    name: 'profile',
-    imgUrl: profile,
-    link: 'profile',
   },
   {
     name: 'logout',

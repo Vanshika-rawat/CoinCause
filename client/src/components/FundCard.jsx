@@ -5,6 +5,7 @@ import { daysLeft } from '../utils';
 
 const FundCard = ({ owner, title, description, target, deadline, amountCollected, image, handleClick }) => {
   const remainingDays = daysLeft(deadline);
+  const formattedOwner = `${owner.substring(0, 5)}.....${owner.substring(owner.length - 5)}`;
   
   return (
     <div className="sm:w-[288px] w-full rounded-[15px] bg-[#1c1c24] cursor-pointer" onClick={handleClick}>
@@ -16,9 +17,8 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
           <p className="ml-[12px] mt-[2px] font-epilogue font-medium text-[12px] text-[#808191]">Education</p>
         </div>
 
-        <div className="block">
-          <h3 className="font-epilogue font-semibold text-[16px] text-white text-left leading-[26px] truncate">{title}</h3>
-          <p className="mt-[5px] font-epilogue font-normal text-[#808191] text-left leading-[18px] truncate">{description}</p>
+        <div className="block overflow-hidden max-h-[80px]" >
+          <h3 className="font-epilogue font-semibold text-[14px] text-white text-left leading-[26px] truncate">{title}</h3>
         </div>
 
         <div className="flex justify-between flex-wrap mt-[15px] gap-2">
@@ -36,7 +36,7 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
           <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#13131a]">
             <img src={thirdweb} alt="user" className="w-1/2 h-1/2 object-contain"/>
           </div>
-          <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">by <span className="text-[#b2b3bd]">{owner}</span></p>
+          <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">by <span className="text-[#b2b3bd]">{formattedOwner}</span></p>
         </div>
       </div>
     </div>

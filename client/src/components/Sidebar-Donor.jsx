@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { CustomButton } from '.';
 import { createCampaign, dashboard, logout, payment, profile, nft, message, } from '../assets';
 import { logo, sun } from '../assets';
-import { navlinks } from '../constants';
+import { navlinks } from '../const1';
 import { useStateContext } from '../context';
 
 const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick }) => (
@@ -16,7 +16,7 @@ const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick }) => (
   </div>
 )
 
-const Sidebar = () => {
+const SidebarDonor = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState('dashboard');
   const { connect, address } = useStateContext();
@@ -50,4 +50,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default SidebarDonor

@@ -6,7 +6,7 @@ import { CustomButton } from '.';
 import { logo, menu, search, user } from '../assets';
 import { navlinks } from '../constants';
 
-const Navbar = () => {
+const NavbarOrg = () => {
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState('dashboard');
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -35,11 +35,19 @@ const Navbar = () => {
           }}
         />
 
-        <Link to="/profile">
-          <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
-            <img src={user} alt="user" className="w-[60%] h-[60%] object-contain" />
-          </div>
-        </Link>
+        <CustomButton 
+          btnType="button"
+          title={
+            <>
+              <img src={user} alt="user" className="w-[100%] h-[100%] object-contain" />
+            </>
+          }
+          styles={"w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer"}
+          handleClick={() => {
+            if(address) navigate('profile');
+            else connect();
+          }}
+        />
       </div>
 
       {/* Small screen navigation */}
@@ -96,4 +104,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavbarOrg

@@ -2,16 +2,17 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import { ConnectWallet } from "@thirdweb-dev/react";
 
-import { Sidebar, Navbar } from "../components";
-import { CampaignDetails, CreateCampaign, Home, Profile } from '.';
+import { SidebarD, Navbar } from "../components";
+import { CampaignDetails, Home, Community, Escrow } from '../pages';
+
 
 const Donor = () => {
   return (
 
-    <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
+    <div className="relative sm:-8 p-4 min-h-screen flex flex-row">
 
       <div className="sm:flex hidden mr-10 relative">
-        <Sidebar />
+        <SidebarD />
       </div>
 
       
@@ -19,10 +20,10 @@ const Donor = () => {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          {/* <Route path="/create-campaign" element={<CreateCampaign />} />*/}
-          <Route path="/campaign-details/:id" element={<CampaignDetails />} />
+        <Route path="/" element={<Home />} />
+          <Route path="campaign-details/:id" element={<CampaignDetails />} />
+          <Route path="community" element={<Community />} />
+          <Route path='escrow' element={<Escrow />} />
         </Routes>
       </div>
       
