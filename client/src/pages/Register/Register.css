@@ -45,7 +45,7 @@ body {
 }
 
 .input{
-  height: 40px;
+  height: 50px;
 }
 
 .title a:hover,
@@ -159,7 +159,7 @@ li{
   }
 
   .formDiv{
-    gap: 2.8rem;
+    gap: 2rem;
     justify-content: center;
     margin-top: 20px;
   }
@@ -171,7 +171,8 @@ li{
 
   form{
     margin-top: -20px;
-    gap: 0.1rem;
+    margin-bottom: -50px;
+    gap: 0rem;
     transform: translateY(-1.8rem);
   }
 
@@ -194,4 +195,8 @@ li{
     .b2{
       margin-left: -40px;
     }
+  }
+
+  .btn_{
+    margin-left: 40px;
   }

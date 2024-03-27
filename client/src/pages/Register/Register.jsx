@@ -54,7 +54,7 @@ const Register = () => {
               <div className="footerDiv">
                 <span className="text">Already a user?</span>
                 <Link to='/'>
-                <button className="btn">Log In</button></Link>
+                <button className="btn btn_">Log In</button></Link>
               </div>
             </div>
           </div>
@@ -127,24 +127,8 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="">
-          <a href="/Donor">Donor</a>
-      </div>
-      <div className="">
-          <a href="/Org">Org</a>
-      </div>
+      
     </div>
-    // <div>
-    //     <div className="">
-    //         <a href="/">Login</a>
-    //     </div>
-    //     <div className="">
-    //         <a href="/Donor">Donor</a>
-    //     </div>
-    //     <div className="">
-    //         <a href="/Org">Org</a>
-    //     </div>
-    // </div>
   )
 }
 
