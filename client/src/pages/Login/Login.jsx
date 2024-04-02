@@ -18,7 +18,7 @@ const Login = () => {
 
   const login_ = (e) => {
     e.preventDefault();
-    Axios.post('http://localhost:3002/loginorg', {
+    Axios.post('http://localhost:3002/login', {
       LoginUserName: loginUserName,
       LoginPassword: loginPassword,
       LoginRegType: "org"
@@ -35,7 +35,7 @@ const Login = () => {
     });
 
     e.preventDefault();
-    Axios.post('http://localhost:3002/logindonor', {
+    Axios.post('http://localhost:3002/login', {
       LoginUserName: loginUserName,
       LoginPassword: loginPassword,
       LoginRegType: "donor"

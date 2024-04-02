@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './Register.css'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
+import ErrorPopup from '../../components/ErrorPopup';
 
 import logo from '../../LoginAssets/logo.png'
 import vid from '../../LoginAssets/vid1.mp4'
@@ -127,7 +128,7 @@ const Register = () => {
         </div>
       </div>
 
-      
+      {errorMessage && <ErrorPopup message={errorMessage} onClose={closeErrorPopup} />}
     </div>
   )
 }
