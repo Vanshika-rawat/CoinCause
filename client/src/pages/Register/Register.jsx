@@ -91,7 +91,7 @@ const Register = () => {
             <div className="txtDiv">
               <div className="footerDiv">
                 <span className="text">Already a user?</span>
-                <Link to="/">
+                <Link to="/login">
                   <button className="btn">Log In</button>
                 </Link>
               </div>
