@@ -14,12 +14,6 @@ Join the future of fundraising with our innovative Web3 community-based crowdfun
 
 There will be many Folders here, so make sure you run the project and install the necessary dependencies inside the correct directory.
 
-For example -
-Our Project Starts inside start so,
-
-E:\github\CoinCause> cd start  
-E:\github\CoinCause\start>
-
 
 ## Deployment
 
@@ -43,7 +37,7 @@ Below are the steps to create a `.env` file, install dependencies, deploy a smar
 
 After creating the `.env` file, follow these steps to install dependencies and deploy the smart contract.
 
-1. Navigate to the `client` directory and the `web3` directory using the command line.
+1. Navigate to the `client` directory, `server` directory and the `web3` directory using the command line.
 
    ```bash
    cd client
@@ -53,7 +47,11 @@ After creating the `.env` file, follow these steps to install dependencies and d
    cd web3
    ```
 
-2. In both the `client` and `web3` directories, run the following command to install the necessary dependencies:
+   ```bash
+   cd server
+   ```
+
+2. In both the `client`, `server` and `web3` directories, run the following command to install the necessary dependencies:
 
    ```bash
    npm install
